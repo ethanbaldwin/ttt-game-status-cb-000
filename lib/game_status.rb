@@ -34,11 +34,15 @@ def full?(board)
 end
 
 def draw?(board)
-  if won?(board) || (full?(board) == false)
+  if won?(board) || !full?(board)
     return false
   else
     return true
   end
+end
+
+def over?(board)
+  if won?(board) || full?(board)
 end
 # board = ["X", "X","X","X","X","X","X","X","X"]
 #
