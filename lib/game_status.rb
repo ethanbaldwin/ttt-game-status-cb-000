@@ -22,8 +22,6 @@ def won?(board)
     win_combination.each { |position| winning_position << board[position]}
     if winning_position == ["X", "X", "X"] || winning_position == ["O", "O", "O"]
       return win_combination
-    # elsif winning_position == ["O", "O", "O"]
-    #   return win_combination
     end
   end
   return false
@@ -49,6 +47,9 @@ def over?(board)
   end
 end
 
+def winner(board) 
+return  board[won?(board)[0]]
+end
 
 # board = ["X", "X","X","X","X","X","X","X","X"]
 #
